@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>JangIn | <%= yield(:title) %></title>
+<title><%= full title(yield(:title)) %></title>
 <%= stylesheet link tag "application", :media => "all" %>
 <%= javascript include tag "application" %>
 <%= csrf meta tags %>

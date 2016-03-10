@@ -11,9 +11,14 @@ visit '/static pages/home'
 page.should have selector('h1', :text => 'JangIn')
 end
 
-it "should have the title 'Home'" do
+it "should have the base title" do
 visit '/static pages/home'
-page.should have selector('title', :text => "#{base title} | Home")
+page.should have selector('title', :text => "JangIn")
+end
+
+it "should not have a custom page title" do
+visit '/static pages/home'
+page.should not have selector('title', :text => '| Home')
 end
 
 end
